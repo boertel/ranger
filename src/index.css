@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+}
+
+input, p, button {
+    font-size: 18px;
+    font-weight: 100;
+}
+
+h1, h2, h3, h4, h5,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+h2 {
+    margin-bottom: 1em;
+}
+
+::selection {
+    background-color: #EFADAF;
+}
+a {
+    color: #EFADAF;
+}
+
+input {
+    padding: 0.5em;
+    border: none;
+    outline: none;
+    background-color: #000;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+
+button {
+    background-color: #EFADAF;
+    outline: none;
+    padding: 0.5em;
+    border: none;
+}
+
+#root {
+    height: 100%;
+}
+
+a {
+    cursor: pointer;
+}
