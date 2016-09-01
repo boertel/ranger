@@ -1,0 +1,17 @@
+.Label {
+    padding: 1em;
+}
+
+.Label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Label h2 {
+    margin-bottom: 0;
+}
+
+.Label a {
+    text-decoration: none;
+}

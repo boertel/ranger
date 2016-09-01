@@ -4,24 +4,48 @@ import React, { Component } from 'react';
 class Face extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            active: false,
-        };
+
+        this.shortcut = this.shortcut.bind(this);
+    }
+
+    shortcut(evt) {
+        if (this.props.shortcut) {
+            if (evt.key === this.props.shortcut) {
+                this.onClick();
+            }
+        }
+    }
+
+    componentDidMount() {
+        window.addEventListener('keydown', this.shortcut);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('keydown', this.shortcut);
     }
 
     onClick() {
-        this.setState({
-            active: true,
-        });
-        this.props.onClick(this.props.name);
+        if (!this.props.disabled) {
+            this.props.onClick(this.props.id, this.props.title);
+        }
     }
 
     render() {
-        const classNames = ['face', this.props.name, this.state.active ? 'active' : ''];
+        const classNames = [
+            'face',
+            this.props.id,
+            this.props.active ? 'active' : '',
+            this.props.disabled ? 'disabled': '',
+        ];
         return (
-            <a title={this.props.title} className={classNames.join(' ')} onClick={this.onClick.bind(this)}></a>
+            <div>
+                <a
+                    title={this.props.title}
+                    className={classNames.join(' ')}
+                    onClick={this.onClick.bind(this)}></a>
+            </div>
         );
     }
 }
 
-export default Face;
+export default (Face);

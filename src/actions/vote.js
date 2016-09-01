@@ -1,15 +1,16 @@
 import { push } from 'react-router-redux';
 
 
-function vote(name, nextIndex) {
+function vote(id, photographId, next) {
     return (dispatch) => {
         setTimeout(() => {
-            //dispatch(push('/picture/' + nextIndex));
+            dispatch(push(next));
         }, 1000);
-        return {
+        return dispatch({
             type: 'VOTE',
-            name,
-        };
+            id,
+            photographId,
+        });
     };
 }
 

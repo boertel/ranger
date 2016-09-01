@@ -12,7 +12,7 @@
 
 .picture p {
     width: 100%;
-    font-size: 42em;
+    font-size: 32em;
     text-align: center;
 }
 
@@ -30,15 +30,11 @@
     color: #888;
 }
 
-
 .sidebar {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;;
-}
-
-.Choice, .Label {
     padding: 1em;
 }
 
@@ -50,6 +46,7 @@
 .Choice .choices {
     display: flex;
     justify-content: space-between;
+    padding: 1em;
 }
 
 .Choice .choices div {
@@ -64,11 +61,15 @@
     height: 140px;
 }
 
+.Choice .face.disabled {
+    cursor: not-allowed;
+}
+
 .Choice .face.cyril {
     background-image: url(./images/chirac.png);
 }
 
-.Choice .face.cyril:hover,
+.Choice .face.cyril:not(.disabled):hover,
 .Choice .face.cyril:focus,
 .Choice .face.cyril:active,
 .Choice .face.cyril.active
@@ -80,9 +81,15 @@
     background-image: url(./images/degaulle.png);
 }
 
-.Choice .face.ben:hover,
+.Choice .face.ben:not(.disabled):hover,
 .Choice .face.ben:focus,
 .Choice .face.ben.active
 {
     background-image: url(./images/degaulle-hover.png);
+}
+
+.Choice .message {
+    padding: 1em;
+    background-color: #3b943b;
+    height: 84px;
 }

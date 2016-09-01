@@ -1,0 +1,12 @@
+.Grid {
+    display: flex;
+    flex-direction: row;
+}
+
+.Grid .thumbnail {
+    margin: 0.5em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+}

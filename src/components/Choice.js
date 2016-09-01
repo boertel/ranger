@@ -7,39 +7,60 @@ import { vote } from '../actions';
 
 
 class Choice extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            locked: false,
-        };
+    vote(photographId) {
+        if (!this.props.photograph.id) {
+            const { next } = this.props;
+            return this.props.dispatch(vote(this.props.id, photographId, next));
+        }
     }
 
-    vote(name) {
-        if (this.state.locked) {
-            return;
-        }
+    renderMessage() {
+        const style = this.props.photograph.id ? {opacity: 1} : {opacity: 0};
+        return (
+            <div className="message" style={style}>
+                <span>Tu as choisi </span>
+                <em>{this.props.photograph.firstName}</em>
+                <span> comme photographe.</span>
+            </div>
+        );
+    }
 
-        this.setState({
-            locked: true,
+    renderPhotographs() {
+        return this.props.photographs.map((photograph) => {
+            return <Face
+                active={this.props.photographId === photograph.id}
+                disabled={this.props.photographId !== undefined}
+                {...photograph}
+                key={photograph.id}
+                onClick={this.vote.bind(this)} />
         });
-        this.props.dispatch(vote(this.props.name, this.props.index))
     }
 
     render() {
         return (
             <div className="Choice">
-                <h3>Qui a pris la photo?</h3>
-                <div className="choices">
-                    <div>
-                        <Face title="Cyril" name="cyril" onClick={this.vote.bind(this)} />
-                    </div>
-                    <div>
-                        <Face title="Ben" name="ben" onClick={this.vote.bind(this)} />
-                    </div>
-                </div>
+                <h3>Qui a pris cette photo?</h3>
+                <div className="choices">{this.renderPhotographs()}</div>
+                {this.renderMessage()}
             </div>
         );
     }
 }
 
-export default connect()(Choice);
+function select(store, props) {
+    let photographs = [];
+    for (var key in store.photographs) {
+        if (store.photographs.hasOwnProperty(key)) {
+            photographs.push(store.photographs[key]);
+        }
+    }
+    const count = Object.keys(store.pictures).length;
+    const nextIndex = props.index + 1;
+    return {
+        photograph: store.photographs[props.photographId] || {},
+        photographs,
+        next: (nextIndex > count) ? '/end' : '/picture/' + nextIndex,
+    }
+}
+
+export default connect(select)(Choice);
