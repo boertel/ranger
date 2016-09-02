@@ -16,6 +16,7 @@ class Face extends Component {
         }
     }
 
+    // TODO remove this from here, Face is UI ONLY
     componentDidMount() {
         window.addEventListener('keydown', this.shortcut);
     }
@@ -32,15 +33,14 @@ class Face extends Component {
 
     render() {
         const classNames = [
-            'face',
             this.props.id,
             this.props.active ? 'active' : '',
             this.props.disabled ? 'disabled': '',
+            this.props.correct ? 'correct' : '',
         ];
         return (
-            <div>
-                <a
-                    title={this.props.title}
+            <div className="Face">
+                <a title={this.props.title}
                     className={classNames.join(' ')}
                     onClick={this.onClick.bind(this)}></a>
             </div>

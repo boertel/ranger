@@ -6,29 +6,67 @@ import _ from 'lodash';
 import './Grid.css';
 
 import Thumbnail from './Thumbnail';
-import { rank } from '../actions';
+import Row from './Row';
+import Face from './Face';
+import { rank, unrank } from '../actions';
 
 
 class Grid extends Component {
 
-    favorite(id) {
-        this.props.dispatch(rank(id, 1));
+    constructor(props) {
+        super(props);
+        this.state = {
+            rank: 0,
+        };
     }
 
-    renderPictures() {
-        return this.props.pictures.map((picture) => {
+    favorite(picture) {
+        if (!picture.ranking && this.state.rank < 3) {
+            this.setState({
+                rank: this.state.rank + 1,
+            }, () => {
+                this.props.dispatch(rank(picture.id, this.state.rank));
+            });
+        } else if (picture.ranking) {
+            this.setState({
+                rank: this.state.rank - 1,
+            }, () => {
+                this.props.dispatch(unrank(picture.id, this.state.rank));
+            });
+        }
+    }
+
+    renderThumbnails(pictures) {
+        return pictures.map((picture) => {
+            const star = picture.ranking ? <span>&#9733;</span> : <span>&#9734;</span>;
             return (
                 <Thumbnail
-                    onClick={this.favorite.bind(this, picture.id)}
                     key={picture.id}
-                    {...picture} />
+                    {...picture}
+                     onClick={this.favorite.bind(this, picture)}
+                    >
+                    <a className="favorite">{star}</a>
+                    <Face correct={picture.predictionId === picture.photographId} id={picture.photographId} />
+                </Thumbnail>
             );
         });
     }
 
     render() {
+        let row = []
+        let rows = [];
+        let key = 0;
+        this.props.pictures.forEach((picture, i) => {
+            row.push(picture);
+            if (i % 3 === 2) {
+                key += 1;
+                rows.push(<Row key={key}>{this.renderThumbnails(row)}</Row>);
+                row = [];
+            }
+        });
+        const style = {width: '100%', height: '100%'};
         return (
-            <div className="Grid">{this.renderPictures()}</div>
+            <div style={style}>{rows}</div>
         );
     }
 };

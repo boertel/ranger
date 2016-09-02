@@ -4,13 +4,22 @@ import React, { Component } from 'react';
 export default class Thumbnail extends Component {
 
     render() {
-        const { url, ranking } = this.props;
+        const { url, ranking, ratio, widthContainer, aspectRatio } = this.props;
+        const width = Math.floor((widthContainer / ratio) * aspectRatio);
+        const height = Math.floor(widthContainer / ratio);
+
+        const style = {
+            marginRight: '1em',
+            width,
+            height,
+        };
         return (
             <div
-                className="thumbnail"
                 onClick={this.props.onClick}
-                style={{backgroundImage: 'url(' + url + ')'}}>
-                {}
+                className="thumbnail"
+                style={style}>
+                <img src={url} width={width} height={height} />
+                {this.props.children}
             </div>
         );
     }

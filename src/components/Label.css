@@ -1,17 +1,25 @@
 .Label {
-    padding: 1em;
+    padding: 0 1em 1em 1em;
 }
 
 .Label {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
 }
 
-.Label h2 {
+.Label .Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.Label .Header h2 {
     margin-bottom: 0;
 }
 
-.Label a {
+.arrow a {
     text-decoration: none;
 }

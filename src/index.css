@@ -30,7 +30,10 @@ p {
     margin-bottom: 1em;
 }
 
-h2 {
+h1 {
+    font-size: 3.2em;
+}
+h1, h2 {
     margin-bottom: 1em;
 }
 
@@ -40,6 +43,9 @@ h2 {
 a {
     color: #EFADAF;
 }
+a:hover, a:active {
+    color: #b17072;
+}
 
 input {
     padding: 0.5em;
@@ -48,6 +54,8 @@ input {
     background-color: #000;
     border-bottom: 1px solid #fff;
     color: #fff;
+    margin: 1em 0em;
+    text-align: center;
 }
 
 button {
@@ -55,6 +63,12 @@ button {
     outline: none;
     padding: 0.5em;
     border: none;
+    margin-bottom: 1em;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #b17072;
 }
 
 #root {

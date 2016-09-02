@@ -10,10 +10,14 @@
     height: 100%;
 }
 
-.picture p {
-    width: 100%;
-    font-size: 32em;
-    text-align: center;
+.picture.introduction {
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+}
+
+.picture.introduction div {
+    margin: 0 0.5em;
 }
 
 .picture {
@@ -34,8 +38,8 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;;
-    padding: 1em;
+    justify-content: space-between;
+    margin-top: 1em;
 }
 
 .Choice h3 {
@@ -54,42 +58,54 @@
     width: 50%;
 }
 
-.Choice .face {
+.Face a {
     display: inline-block;
     background-repeat: no-repeat;
+    background-size: cover;
     width: 120px;
     height: 140px;
 }
 
-.Choice .face.disabled {
+.Face .disabled {
     cursor: not-allowed;
 }
 
-.Choice .face.cyril {
+.Face .cyril {
     background-image: url(./images/chirac.png);
 }
 
-.Choice .face.cyril:not(.disabled):hover,
-.Choice .face.cyril:focus,
-.Choice .face.cyril:active,
-.Choice .face.cyril.active
+.Face .cyril:not(.disabled):hover,
+.Face .cyril:focus,
+.Face .cyril:active,
+.Face .cyril.active
 {
     background-image: url(./images/chirac-hover.png);
 }
 
-.Choice .face.ben {
+.Face .ben {
     background-image: url(./images/degaulle.png);
 }
 
-.Choice .face.ben:not(.disabled):hover,
-.Choice .face.ben:focus,
-.Choice .face.ben.active
+.Face .ben:not(.disabled):hover,
+.Face .ben:focus,
+.Face .ben.active
 {
     background-image: url(./images/degaulle-hover.png);
 }
 
 .Choice .message {
     padding: 1em;
+    background-color: red;
+    margin: 0;
+}
+
+.Choice.correct .message {
     background-color: #3b943b;
-    height: 84px;
+}
+
+.Next {
+    cursor: pointer;
+    background-color: #EFADAF;
+    padding: 1em;
+    text-align: center;
 }

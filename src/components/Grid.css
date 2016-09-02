@@ -3,10 +3,33 @@
     flex-direction: row;
 }
 
-.Grid .thumbnail {
-    margin: 0.5em;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 200px;
+.thumbnail {
+    position: relative;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+.favorite {
+    position: absolute;
+    bottom: 0em;
+    right: 0.2em;
+    font-size: 2em;
+}
+
+.thumbnail .Face {
+    position: absolute;
+    bottom: 0em;
+}
+
+.thumbnail .Face a {
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+.thumbnail .Face a.correct {
+    background-color: rgba(0, 255, 0, 0.3);
+}
+
+.thumbnail .Face a {
+    width: 80px;
+    height: 93px;
 }

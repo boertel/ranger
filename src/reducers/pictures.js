@@ -11,10 +11,14 @@ export default function pictures(state=initialState, action) {
             return Object.assign({}, state, action.pictures);
 
         case 'VOTE':
-            return picture(action.id, state, {photographId: action.photographId})
+            return picture(action.id, state, {predictionId: action.predictionId})
 
         case 'PICTURES_RANKED':
             return picture(action.id, state, {ranking: action.ranking})
+
+        case 'PICTURES_UNRANKED':
+            return picture(action.id, state, {ranking: undefined})
+
         default:
             return state;
     }

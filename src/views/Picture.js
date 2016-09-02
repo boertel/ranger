@@ -24,7 +24,7 @@ class Picture extends Component {
     }
 
     render() {
-        const { index, count, title, description, url, photographId } = this.props;
+        const { index, count, title, description, url, predictionId, photographId } = this.props;
         return (
             <div className="Content">
                 <div className="picture" style={{backgroundImage: 'url(' + url + ')'}}></div>
@@ -32,11 +32,9 @@ class Picture extends Component {
                     <Label
                         index={index}
                         count={count}
-                        hasNext={photographId !== undefined}
-                        title={title}>
-                            <p>{description}</p>
-                        </Label>
-                    <Choice index={index} id={this.props.id} photographId={photographId} />
+                        hasNext={predictionId !== undefined}
+                        {...this.props} />
+                    <Choice index={index} id={this.props.id} predictionId={predictionId} photographId={photographId} />
                 </div>
             </div>
         );

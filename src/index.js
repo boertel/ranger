@@ -27,7 +27,7 @@ ReactDOM.render((
             <Route path="/" component={App}>
                 <IndexRoute component={Introduction} />
                 <Route path="/picture/:index" component={Picture} />
-                <Route path="/Favorites" component={Favorites} />
+                <Route path="/favorites" component={Favorites} />
                 <Route path="/end" component={End} />
                 <Route path="*" component={NotFound} />
             </Route>
