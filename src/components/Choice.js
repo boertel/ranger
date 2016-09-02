@@ -102,7 +102,7 @@ function select(store, props) {
         prediction: store.photographs[props.predictionId] || {},
         photograph: store.photographs[props.photographId] || {},
         photographs,
-        next: (nextIndex > count) ? '/favorites' : '/picture/' + nextIndex,
+        next: (nextIndex > count) ? '/end' : '/picture/' + nextIndex,
         correct: props.predictionId !== undefined ? props.predictionId === props.photographId : undefined,
     }
 }

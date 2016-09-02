@@ -1,42 +1,38 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 
+import { Link } from 'react-router';
 import { connect } from 'react-redux';
 
-import Thumbnail from '../components/Thumbnail';
-import Row from '../components/Row';
-import Face from '../components/Face';
+import Grid from '../components/Grid';
 
 
 class End extends Component {
-    renderPictures() {
-        return this.props.pictures.map((picture) => {
-            const correct = picture.photographId === picture.predictionId;
-            const style = {
-                backgroundColor: correct ? 'rgba(0, 255, 0, 0.3' : 'rgba(255, 0, 0, 0.3)',
-            };
-            return (
-                <Thumbnail
-                    key={picture.id}
-                    {...picture}>
-                    <div className="overlay" style={style} />
-                    <Face id={picture.photographId} />
-                </Thumbnail>
-            );
-        });
-    }
-
     render() {
+        const count = 3 - this.props.favorites;
+        const thanks = count === 0 ? <p style={{textAlign: 'center'}}>Merci de la part de<br />Cyril & Benjamin :)</p> : null;
+        const percentage = Math.floor(this.props.correct / this.props.total * 100);
+        const back = '/picture/' + this.props.total;
+
         return (
             <div className="Content">
                 <div className="picture">
-                    <Row>{this.renderPictures()}</Row>
+                    <Grid />
                 </div>
                 <div className="sidebar">
-                    <h2>Presque fini, une dernière étape!</h2>
                     <div>
-                        <h3>{this.props.correct}</h3>
+                        <div className="arrow">
+                            <Link to={back}>&larr;</Link>
+                        </div>
+                        <h1>{percentage}%</h1>
+                        <p>Tu as réussi à deviner <strong>{this.props.correct} fois</strong> le correct photographe sur les {this.props.total} photographies.</p>
                     </div>
+
+                    <div>
+                        <h2>Une dernière étape !</h2>
+                            <p>Choisi tes <strong>{count}</strong> photographies préferées and cliquant sur <a>&#9734;</a>.</p>
+                    </div>
+                    <div>{thanks}</div>
                 </div>
             </div>
         );
@@ -46,7 +42,8 @@ class End extends Component {
 function select(store) {
     const pictures = _.values(store.pictures);
     return {
-        pictures: _.chain(store.pictures).pick(store.order).values().value(),
+        total: pictures.length,
+        favorites: pictures.filter(picture => !!picture.ranking).length,
         correct: pictures.filter(picture => picture.photographId === picture.predictionId).length
     }
 }

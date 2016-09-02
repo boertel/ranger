@@ -4,6 +4,8 @@ import { browserHistory } from 'react-router';
 import { routerMiddleware } from 'react-router-redux';
 import thunk from 'redux-thunk';
 
+import analytics from './analytics';
+
 var logger = createLogger({
     predicate: () => true,
     collapsed: true,
@@ -11,4 +13,4 @@ var logger = createLogger({
 });
 
 const router = routerMiddleware(browserHistory);
-export default applyMiddleware(router, thunk, logger)(createStore)
+export default applyMiddleware(router, thunk, logger, analytics)(createStore)
