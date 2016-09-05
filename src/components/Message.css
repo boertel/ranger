@@ -1,0 +1,11 @@
+.Message {
+    padding: 1em;
+}
+
+.Message.wrong {
+    background-color: #f00;
+}
+
+.Message.correct {
+    background-color: #0f0;
+}

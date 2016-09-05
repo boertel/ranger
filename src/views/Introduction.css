@@ -1,11 +1,14 @@
 .Introduction {
     display: flex;
+    height: 100%;
 }
 
-@media (max-width: 800px) {
-    .Introduction {
-        flex-direction: column;
-    }
+.Introduction h2 {
+    margin-bottom: 1em;
+}
+
+.Introduction .Sidebar {
+    padding: 2em 1em;
 }
 
 .Introduction .Faces {
@@ -16,3 +19,14 @@
     font-size: 2.5em;
     flex: 3;
 }
+
+@media (max-width: 800px) {
+    .Introduction {
+        flex-direction: column;
+    }
+    .Introduction .Faces {
+        flex: none;
+        margin-top: 1em;
+    }
+}
+

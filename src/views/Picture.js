@@ -7,6 +7,7 @@ import { next, back } from '../actions';
 import {
     Choices,
     Header,
+    Message,
     Metadata,
     Next,
 } from '../components';
@@ -85,6 +86,7 @@ class Picture extends Component {
                             <div>{metadata}</div>
                             <Choices {...this.props} />
                         </div>
+                        <Message {...this.props} />
                         <Next onClick={this.next} show={hasNext} />
                     </div>
                 </div>
@@ -99,6 +101,7 @@ function select(store, props) {
     const current = store.pictures[key];
     return {
         ...current,
+        photograph: store.photographs[current.photographId],
         hasNext: current.predictionId !== undefined,
         index,
         count: Object.keys(store.pictures).length,

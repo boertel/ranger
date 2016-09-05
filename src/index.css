@@ -34,8 +34,10 @@ p {
 ::selection {
     background-color: #EFADAF;
 }
+
 a {
     color: #EFADAF;
+    cursor: pointer;
 }
 a::selection {
     background-color: transparent;
@@ -71,8 +73,4 @@ button:hover {
 
 #root {
     height: 100%;
-}
-
-a {
-    cursor: pointer;
 }

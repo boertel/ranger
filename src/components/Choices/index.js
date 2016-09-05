@@ -72,28 +72,12 @@ class Choices extends Component {
         return <div className="Faces">{photographs}</div>;
     }
 
-    renderMessage() {
-        const { prediction, photograph, correct } = this.props;
-        const style = {opacity: prediction.id ? 1 : 0}
-        let message = null;
-        let classNames = ['Message'];
-        if (correct) {
-            message = "Bravo ! C'était bien " + photograph.firstName;
-            classNames.push('correct');
-        } else {
-            classNames.push('wrong');
-            message = "Oups ! C'était " + photograph.firstName;
-        }
-        return <div className={classNames.join(' ')} style={style}>{message}</div>;
-    }
-
     render() {
         return (
             <div className="Choices">
                 <h3>Qui a pris cette photo ?</h3>
                 <div>
                     {this.renderFaces()}
-                    {this.renderMessage()}
                 </div>
             </div>
         );
