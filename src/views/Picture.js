@@ -82,8 +82,10 @@ class Picture extends Component {
                     <div className="Picture" style={{backgroundImage: 'url(' + url + ')'}}></div>
                     <div className="Sidebar">
                         <div className="Aside">
-                            {header}
-                            <div>{metadata}</div>
+                            <div>
+                                {header}
+                                <div>{metadata}</div>
+                            </div>
                             <Choices {...this.props} />
                         </div>
                         <Message {...this.props} />

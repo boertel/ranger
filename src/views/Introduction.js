@@ -50,7 +50,7 @@ class Introduction extends Component {
                             <input
                                 type="text"
                                 placeholder="Votre prénom"
-                                value={this.props.firstName}
+                                value={this.state.firstName}
                                 onChange={(evt) => this.setState({firstName: evt.target.value}) }
                             />
                             <br/>

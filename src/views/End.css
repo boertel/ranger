@@ -9,7 +9,15 @@
 }
 
 .End .Sidebar {
+    height: 100%;
     padding: 1em;
+}
+
+.End .Header h1 {
+    font-size: 3em;
+}
+.End h2 {
+    margin: 2em 0em 0.5em;
 }
 
 @media (max-width: 800px) {
