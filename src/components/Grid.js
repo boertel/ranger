@@ -39,14 +39,14 @@ class Grid extends Component {
     renderThumbnails(pictures) {
         return pictures.map((picture) => {
             const star = picture.ranking ? <span>&#9733;</span> : <span>&#9734;</span>;
+            const photograph = this.props.photographs[picture.photographId];
             return (
                 <Thumbnail
                     key={picture.id}
-                    {...picture}
-                     onClick={this.favorite.bind(this, picture)}
-                    >
-                    <a className="favorite">{star}</a>
-                    <Face correct={picture.predictionId === picture.photographId} id={picture.photographId} />
+                    onClick={this.favorite.bind(this, picture)}
+                    {...picture}>
+                    <a className="Favorite">{star}</a>
+                    <Face correct={picture.correct} {...photograph} />
                 </Thumbnail>
             );
         });
@@ -64,15 +64,15 @@ class Grid extends Component {
                 row = [];
             }
         });
-        const style = {width: '100%', height: '100%'};
         return (
-            <div style={style}>{rows}</div>
+            <div className="Grid">{rows}</div>
         );
     }
 };
 
 function select(store) {
     return {
+        photographs: store.photographs,
         pictures: _.chain(store.pictures).pick(store.order).values().value(),
     }
 }

@@ -3,109 +3,16 @@
     width: 100%;
 }
 
-.Content {
+.Layout {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 100%;
 }
 
-.picture.introduction {
-    justify-content: center;
-    align-items: center;
-    font-size: 2.5em;
-}
-
-.picture.introduction div {
-    margin: 0 0.5em;
-}
-
-.picture {
-    flex: 4;
-    margin: 1em;
-    display: flex;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-}
-
-.subtle {
-    color: #888;
-}
-
-.sidebar {
+.Sidebar {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 1em;
-}
-
-.Choice h3 {
-    text-align: center;
-    margin-bottom: 2em;
-}
-
-.Choice .choices {
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
-}
-
-.Choice .choices div {
-    text-align: center;
-    width: 50%;
-}
-
-.Face a {
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 120px;
-    height: 140px;
-}
-
-.Face .disabled {
-    cursor: not-allowed;
-}
-
-.Face .cyril {
-    background-image: url(./images/chirac.png);
-}
-
-.Face .cyril:not(.disabled):hover,
-.Face .cyril:focus,
-.Face .cyril:active,
-.Face .cyril.active
-{
-    background-image: url(./images/chirac-hover.png);
-}
-
-.Face .ben {
-    background-image: url(./images/degaulle.png);
-}
-
-.Face .ben:not(.disabled):hover,
-.Face .ben:focus,
-.Face .ben.active
-{
-    background-image: url(./images/degaulle-hover.png);
-}
-
-.Choice .message {
-    padding: 1em;
-    background-color: red;
-    margin: 0;
-}
-
-.Choice.correct .message {
-    background-color: #3b943b;
-}
-
-.Next {
-    cursor: pointer;
-    background-color: #EFADAF;
-    padding: 1em;
-    text-align: center;
 }

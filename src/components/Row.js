@@ -31,12 +31,9 @@ export default class Row extends Component {
                 widthContainer: this.state.width,
             });
         });
-        const style = {
-            display: 'flex',
-            width: '100%'
-        };
+
         return (
-            <div style={style} ref={(c) => this._container = c}>
+            <div className="Row" ref={(c) => this._container = c}>
                 {children}
             </div>
         )

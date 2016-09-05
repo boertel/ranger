@@ -1,35 +1,37 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 
-import { Link } from 'react-router';
 import { connect } from 'react-redux';
 
-import Grid from '../components/Grid';
+import {
+    Grid,
+    Header,
+} from '../components';
+import { back } from '../actions';
+
+import './End.css';
 
 
 class End extends Component {
     render() {
-        const count = 3 - this.props.favorites;
-        const thanks = count === 0 ? <p style={{textAlign: 'center'}}>Merci de la part de<br />Cyril & Benjamin :)</p> : null;
-        const percentage = Math.floor(this.props.correct / this.props.total * 100);
-        const back = '/picture/' + this.props.total;
+        const { dispatch, total, favorites, correct } = this.props;
+        const count = 3 - favorites;
+        const thanks = count === 0 ? <div>Merci de la part deCyril & Benjamin :)</div> : null;
+        const percentage = Math.floor(correct / total * 100);
 
         return (
-            <div className="Content">
-                <div className="picture">
-                    <Grid />
-                </div>
-                <div className="sidebar">
-                    <div>
-                        <div className="arrow">
-                            <Link to={back}>&larr;</Link>
-                        </div>
+            <div className="End">
+                <Grid />
+                <div className="Sidebar">
+                    <Header back={() => dispatch(back(total + 1))}>
                         <h1>{percentage}%</h1>
-                        <p>Tu as réussi à deviner <strong>{this.props.correct} fois</strong> le correct photographe sur les {this.props.total} photographies.</p>
+                    </Header>
+                    <div>
+                    <p>Tu as réussi à deviner <strong>{correct} fois</strong> le correct photographe sur les {total} photographies.</p>
                     </div>
 
                     <div>
-                        <h2>Une dernière étape !</h2>
+                        <h2>Et une dernière étape !</h2>
                             <p>Choisi tes <strong>{count}</strong> photographies préferées and cliquant sur <a>&#9734;</a>.</p>
                     </div>
                     <div>{thanks}</div>

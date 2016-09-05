@@ -6,6 +6,7 @@ import { push } from 'react-router-redux';
 import { vote } from '../actions';
 import Face from './Face';
 
+import './Choice.css';
 
 
 class Choice extends Component {

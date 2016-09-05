@@ -20,7 +20,7 @@ import reducers from './reducers';
 
 
 const store = createStore(reducers, autoRehydrate());
-persistStore(store, {blacklist: ['routing']});
+//persistStore(store, {blacklist: ['routing']});
 
 const history = syncHistoryWithStore(browserHistory, store)
 

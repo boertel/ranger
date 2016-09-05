@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './Thumbnail.css';
+
 
 export default class Thumbnail extends Component {
 
@@ -9,16 +11,15 @@ export default class Thumbnail extends Component {
         const height = Math.floor(widthContainer / ratio);
 
         const style = {
-            marginRight: '1em',
             width,
             height,
         };
         return (
             <div
                 onClick={this.props.onClick}
-                className="thumbnail"
+                className="Thumbnail"
                 style={style}>
-                <img src={url} width={width} height={height} />
+                <img src={url} />
                 {this.props.children}
             </div>
         );

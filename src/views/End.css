@@ -1,0 +1,19 @@
+.End {
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+}
+
+.End .Grid {
+    flex: 3;
+}
+
+.End .Sidebar {
+    min-height: 100%;
+}
+
+@media (max-width: 800px) {
+    .End {
+        flex-direction: column-reverse;
+    }
+}

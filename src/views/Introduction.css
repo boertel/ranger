@@ -1,0 +1,18 @@
+.Introduction {
+    display: flex;
+}
+
+@media (max-width: 800px) {
+    .Introduction {
+        flex-direction: column;
+    }
+}
+
+.Introduction .Faces {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    flex: 3;
+}

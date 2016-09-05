@@ -1,0 +1,74 @@
+.Layout {
+    flex-direction: column;
+}
+
+.Layout > .Header {
+    display: none;
+}
+
+.Content {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.Sidebar {
+    height: 100%;
+}
+
+.Aside {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+    .Layout > .Header {
+        display: flex;
+    }
+
+    .Content .Header {
+        display: none;
+    }
+
+    .Content {
+        flex-direction: column;
+    }
+
+    .Aside {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+
+    .Aside > div {
+        width: 50%;
+    }
+}
+
+@media (max-width: 400px) {
+    .Picture {
+        flex: 2;
+    }
+
+    .Aside {
+        flex-direction: column;
+    }
+
+    .Aside > div {
+        width: 100%;
+    }
+
+    .Aside .Metadata {
+        display: none;
+    }
+}
+
+.Picture {
+    flex: 3;
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}

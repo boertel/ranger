@@ -1,35 +1,18 @@
 .Grid {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
 }
 
-.thumbnail {
-    position: relative;
-    margin-right: 1em;
-    margin-bottom: 1em;
+.Row {
+    display: flex;
+    width: 100%;
 }
 
-.favorite {
+.Favorite {
     position: absolute;
-    bottom: 0em;
-    right: 0.2em;
+    bottom: 0;
+    right: 0;
     font-size: 2em;
-}
-
-.thumbnail .Face {
-    position: absolute;
-    bottom: 0em;
-}
-
-.thumbnail .Face a {
-    background-color: rgba(255, 0, 0, 0.3);
-}
-
-.thumbnail .Face a.correct {
-    background-color: rgba(0, 255, 0, 0.3);
-}
-
-.thumbnail .Face a {
-    width: 80px;
-    height: 93px;
 }

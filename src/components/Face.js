@@ -1,51 +1,22 @@
 import React, { Component } from 'react';
 
+import './Face.css';
 
-class Face extends Component {
-    constructor(props) {
-        super(props);
 
-        this.shortcut = this.shortcut.bind(this);
-    }
-
-    shortcut(evt) {
-        if (this.props.shortcut) {
-            if (evt.key === this.props.shortcut) {
-                this.onClick();
-            }
-        }
-    }
-
-    // TODO remove this from here, Face is UI ONLY
-    componentDidMount() {
-        window.addEventListener('keydown', this.shortcut);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('keydown', this.shortcut);
-    }
-
-    onClick() {
-        if (!this.props.disabled) {
-            this.props.onClick(this.props.id, this.props.title);
-        }
-    }
-
+export default class Face extends Component {
     render() {
-        const classNames = [
-            this.props.id,
-            this.props.active ? 'active' : '',
-            this.props.disabled ? 'disabled': '',
-            this.props.correct ? 'correct' : '',
-        ];
+        const { correct, disabled } = this.props;
+        const style = {
+            backgroundImage: 'url(' + this.props.image + ')',
+        };
+        const classNames = ['Face'];
+
+        (correct === true) && classNames.push('correct');
+        (correct === false) && classNames.push('wrong');
+        disabled && classNames.push('disabled');
+
         return (
-            <div className="Face">
-                <a title={this.props.title}
-                    className={classNames.join(' ')}
-                    onClick={this.onClick.bind(this)}></a>
-            </div>
+            <div className={classNames.join(' ')} style={style} />
         );
     }
 }
-
-export default (Face);

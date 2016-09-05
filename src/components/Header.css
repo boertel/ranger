@@ -1,0 +1,17 @@
+.Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header .subtle {
+    color: #888;
+}
+
+.Header .arrow a {
+    text-decoration: none;
+}
+
+.Header h2 {
+}

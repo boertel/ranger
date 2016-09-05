@@ -1,0 +1,33 @@
+.Choice h3 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.Choice .choices {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+}
+
+.Choice .choices div {
+    text-align: center;
+    width: 50%;
+}
+
+.Choice .message {
+    padding: 1em;
+    background-color: red;
+    margin: 0;
+}
+
+.Choice.correct .message {
+    background-color: #3b943b;
+}
+
+
+.Choice .Next {
+    cursor: pointer;
+    background-color: #EFADAF;
+    padding: 1em;
+    text-align: center;
+}

@@ -1,0 +1,20 @@
+.Choices .Faces {
+    display: flex;
+    justify-content: space-around;
+}
+
+.Choices .Faces .Face:not(.disabled):hover {
+    filter: none;
+}
+
+.Choices .Message {
+    padding: 1em;
+}
+
+.Choices .Message.wrong {
+    background-color: #f00;
+}
+
+.Choices .Message.correct {
+    background-color: #0f0;
+}
