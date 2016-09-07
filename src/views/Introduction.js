@@ -43,7 +43,8 @@ class Introduction extends Component {
                     <div>
                         <h2>Saurez-vous trouver le style du photographe?</h2>
                         <p>Après quelques milliers de photos prises pendant 2 semaines, nous nous sommes demandés si les gens seraient capables de deviner quelles photographies &eacute;taient prises par <em>qui</em>.</p>
-                        <p>Parcourez les 30 photos selectionnées et cliquez sur la tête de la personne que vous pensez avoir pris la photo et vous decouvrirez votre résultat à la fin.</p>
+                        <br />
+                        <p>Le critère de sélection était de choisir une photo par jour. Parcourez les 30 photos selectionnées et cliquez sur la tête du photographe que vous pensez à pris la photo.</p>
                     </div>
                     <div>
                         <p style={{textAlign: 'center'}}>

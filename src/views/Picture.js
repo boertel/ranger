@@ -33,10 +33,10 @@ class Picture extends Component {
     }
 
     onKeydown(evt) {
-        if (evt.key === 'k') {
+        if (evt.key === 'k' || evt.key === 'ArrowRight') {
             this.next();
         }
-        if (evt.key === 'j') {
+        if (evt.key === 'j' || evt.key === 'ArrowLeft') {
             this.back();
         }
     }

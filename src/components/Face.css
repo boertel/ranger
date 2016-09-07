@@ -6,6 +6,12 @@
     filter: grayscale();
 }
 
+@media (max-width: 800px) {
+    .Face {
+        width: 96px;
+        height: 112px;
+    }
+}
 @media (max-width: 400px) {
     .Face {
         width: 84px;

@@ -10,7 +10,6 @@ export default function Metadata(props) {
             <p><em>{props.title}</em></p>
             <p>{props.description}</p>
             <Location {...props.location} />
-            <Time date={props.date} />
         </div>
     );
 }
