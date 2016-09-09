@@ -36,7 +36,7 @@ class Introduction extends Component {
     }
 
     next() {
-        this.props.dispatch(next(1));
+        this.props.dispatch(next(0, this.props.count));
     }
 
     renderFaces() {
@@ -91,7 +91,7 @@ class Introduction extends Component {
                         <h2>Saurez-vous trouver le style du photographe?</h2>
                         <p>Après quelques milliers de photos prises pendant 2 semaines, nous nous sommes demandés si les gens seraient capables de deviner quelles photographies &eacute;taient prises par <em>qui</em>.</p>
                         <br />
-                        <p>Le critère de sélection était de choisir une photo par jour. Parcourez les 30 photos selectionnées et cliquez sur la tête du photographe que vous pensez à pris la photo.</p>
+                        <p>Le critère de sélection était de choisir une photo par jour. Parcourez les {this.props.count} photos selectionnées et cliquez sur la tête du photographe que vous pensez à pris la photo.</p>
                     </div>
                     {this.renderWelcomeBack()}
                     {this.renderForm()}
@@ -104,6 +104,7 @@ class Introduction extends Component {
 function select(store) {
     const { firstName, isAnonymous } = store.user;
     return {
+        count: Object.keys(store.pictures).length,
         photographs: store.photographs,
         firstName,
         isAnonymous,

@@ -1,5 +1,5 @@
-import cyril from '../images/chirac-hover.png';
-import ben from '../images/degaulle-hover.png';
+import cyril from '../images/cyril.png';
+import ben from '../images/ben.png';
 
 
 const photographs = {
