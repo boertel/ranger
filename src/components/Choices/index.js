@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { FormattedMessage } from 'react-intl';
 import _ from 'lodash'
 
 import { vote } from '../../actions';
@@ -75,7 +76,7 @@ class Choices extends Component {
     render() {
         return (
             <div className="Choices">
-                <h3>Qui a pris cette photo ?</h3>
+                <h3><FormattedMessage id="who" /></h3>
                 <div>
                     {this.renderFaces()}
                 </div>

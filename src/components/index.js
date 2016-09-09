@@ -6,6 +6,7 @@ import Message from './Message';
 import Metadata from './Metadata';
 import Next from './Next';
 import Thanks from './Thanks';
+import Photo from './Photo';
 
 
 module.exports = {
@@ -17,4 +18,5 @@ module.exports = {
     Next,
     Grid,
     Thanks,
+    Photo,
 };

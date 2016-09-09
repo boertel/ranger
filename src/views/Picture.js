@@ -10,6 +10,7 @@ import {
     Message,
     Metadata,
     Next,
+    Photo,
 } from '../components';
 
 import './Picture.css';
@@ -66,7 +67,7 @@ class Picture extends Component {
     }
 
     render() {
-        const { index, count, hasNext, url, } = this.props;
+        const { index, count, hasNext, src, } = this.props;
 
         const next = hasNext ? this.next : undefined
 
@@ -79,7 +80,7 @@ class Picture extends Component {
             <div className="Layout">
                 {header}
                 <div className="Content">
-                    <div className="Picture" style={{backgroundImage: 'url(' + url + ')'}}></div>
+                    <Photo src={src} />
                     <div className="Sidebar">
                         <div className="Aside">
                             <div>

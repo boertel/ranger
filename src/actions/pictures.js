@@ -1,138 +1,47 @@
-import first from '../images/DSCF0356.jpg';
-import second from '../images/DSCF0923.jpg';
-import third from '../images/DSCF0941.jpg';
-
-const pictures = {
-    'DSCF0356': {
-        id: 'DSCF0356',
-        title: 'Hello',
-        description: 'World',
-        location: {
-            name: 'Miloli\'i, Big Island, Hawaii, USA',
+const pictures =
+    {
+    "29461544292": {
+        "height": "2448",
+        "id": "29461544292",
+        "src": {
+            "farm": 9,
+            "id": "29461544292",
+            "secret": "c103a18c3c",
+            "server": "8161",
+            "type": "flickr"
         },
-        date: '2016-08-19',
-        url: first,
-        width: 4896,
-        height: 3264,
-        photographId: 'ben',
+        "title": "IMG_8721",
+        "width": "3264",
+        "photographId": "ben",
     },
-    'DSCF0923': {
-        id: 'DSCF0923',
-        title: 'Hello',
-        description: 'World',
-        url: second,
-        width: 3264,
-        height: 4896,
-        photographId: 'cyril',
+    "29490724701": {
+        "height": "2448",
+        "id": "29490724701",
+        "src": {
+            "farm": 9,
+            "id": "29490724701",
+            "secret": "865618c2bf",
+            "server": "8162",
+            "type": "flickr"
+        },
+        "title": "IMG_8718",
+        "width": "3264",
+        "photographId": "ben",
     },
-    'DSCF0941': {
-        id: 'DSCF0941',
-        title: 'Hello',
-        description: 'World',
-        url: third,
-        width: 3264,
-        height: 4896,
-        photographId: 'cyril',
-    },
-    'DSCF0942': {
-        id: 'DSCF0942',
-        title: 'Hello',
-        description: 'World',
-        url: third,
-        width: 3264,
-        height: 4896,
-        photographId: 'cyril',
-    },
-    'DSCF0943': {
-        id: 'DSCF0943',
-        title: 'Hello',
-        description: 'World',
-        url: third,
-        width: 3264,
-        height: 4896,
-        photographId: 'cyril',
-    },
-    'DSCF0944': {
-        id: 'DSCF0944',
-        title: 'Hello',
-        description: 'World',
-        url: third,
-        width: 3264,
-        height: 4896,
-        photographId: 'cyril',
-    },
-    'DSCF0945': {
-        id: 'DSCF0945',
-        title: 'Hello',
-        description: 'World',
-        url: third,
-        width: 3264,
-        height: 4896,
-        photographId: 'cyril',
-    },
-    'DSCF0946': {
-        id: 'DSCF0946',
-        title: 'Hello',
-        description: 'World',
-        url: third,
-        width: 3264,
-        height: 4896,
-        photographId: 'cyril',
-    },
-    'DSCF0947': {
-        id: 'DSCF0947',
-        title: 'Hello',
-        description: 'World',
-        url: third,
-        width: 3264,
-        height: 4896,
-        photographId: 'cyril',
-    },
-    'DSCF0949': {
-        id: 'DSCF0949',
-        title: 'Hello',
-        description: 'World',
-        url: third,
-        width: 3264,
-        height: 4896,
-        photographId: 'cyril',
-    },
-    'DSCF0950': {
-        id: 'DSCF0950',
-        title: 'Hello',
-        description: 'World',
-        url: third,
-        width: 3264,
-        height: 4896,
-        photographId: 'cyril',
-    },
-    'DSCF0951': {
-        id: 'DSCF0951',
-        title: 'Hello',
-        description: 'World',
-        url: third,
-        width: 3264,
-        height: 4896,
-        photographId: 'cyril',
-    },
-    'DSCF0952': {
-        id: 'DSCF0952',
-        title: 'Hello',
-        description: 'World',
-        url: third,
-        width: 3264,
-        height: 4896,
-        photographId: 'cyril',
-    },
-    'DSCF0953': {
-        id: 'DSCF0953',
-        title: 'Hello',
-        description: 'World',
-        url: third,
-        width: 3264,
-        height: 4896,
-        photographId: 'cyril',
-    },
+    "29536697266": {
+        "height": "3264",
+        "id": "29536697266",
+        "src": {
+            "farm": 9,
+            "id": "29536697266",
+            "secret": "74f51f4a5f",
+            "server": "8299",
+            "type": "flickr"
+        },
+        "title": "Chilling saving lives",
+        "width": "4896",
+        "photographId": "ben",
+    }
 };
 
 

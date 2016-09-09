@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 
 import { connect } from 'react-redux';
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl';
 
 import {
     Grid,
@@ -45,12 +46,11 @@ class End extends Component {
                             <h1>{percentage}%</h1>
                         </Header>
                         <div>
-                        <p>Tu as réussi à deviner <strong>{correct} fois</strong> le correct photographe sur les {total} photographies.</p>
+                            <p><FormattedHTMLMessage id="success" values={{correct, total, }}/></p>
                         </div>
-
                         <div>
-                            <h2>Et une dernière étape !</h2>
-                                <p>Choisi tes <strong>{count}</strong> photographies préferées and cliquant sur <a>&#9734;</a>.</p>
+                            <h2><FormattedMessage id="lastStep" /></h2>
+                            <p><FormattedHTMLMessage id="favorite" values={{count,}}/></p>
                         </div>
                     </div>
                 </div>

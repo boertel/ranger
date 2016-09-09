@@ -1,19 +1,24 @@
 import React from 'react';
+import {
+    injectIntl,
+    FormattedMessage,
+} from 'react-intl';
 
 import './Message.css';
 
-export default function Message(props) {
+function Message(props) {
     const { photograph, correct } = props;
     const style = {opacity: correct !== undefined ? 1 : 0}
     let message = null;
     let classNames = ['Message'];
     if (correct) {
-        message = "Bravo ! C'était bien " + photograph.firstName;
+        message = <FormattedMessage id="correct" values={{firstName:  photograph.firstName}} />
         classNames.push('correct');
     } else {
         classNames.push('wrong');
-        message = "Oups ! C'était " + photograph.firstName;
+        message = <FormattedMessage id="wrong" values={{firstName:  photograph.firstName}} />
     }
     return <div className={classNames.join(' ')} style={style}>{message}</div>;
 }
 
+export default injectIntl(Message);

@@ -6,3 +6,7 @@
     background-color: #EFADAF;
     cursor: pointer;
 }
+
+.Next:hover {
+    background-color: #b17072;
+}

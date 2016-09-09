@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl';
 import './Thanks.css';
 
 
@@ -12,12 +13,12 @@ export default class Thanks extends Component {
             <div className="Overlay">
                 <div className="Thanks">
                     <div>
-                        <p>Merci d'avoir participer à cette petite expérimentation.</p>
-                        <p className="signature">Cyril &amp; Benjamin Oertel</p>
-                        <p><a onClick={this.props.close}>Retour aux photos</a></p>
+                        <p><FormattedMessage id="thanks" /></p>
+                        <p className="signature"><FormattedMessage id="signature" /></p>
+                        <p><a onClick={this.props.close}><FormattedMessage id="backToPhotos" /></a></p>
                     </div>
                     <div className="credits">
-                        <p>Crée par <a href="http://ben.oertel.fr" target="_blank">ben.oertel.fr</a></p>
+                        <p><FormattedHTMLMessage id="credits" /></p>
                     </div>
                 </div>
             </div>

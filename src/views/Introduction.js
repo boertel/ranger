@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
+import { injectIntl, FormattedMessage, FormattedHTMLMessage } from 'react-intl';
+
 
 import {
     register,
@@ -44,7 +46,7 @@ class Introduction extends Component {
         return (
             <div className="Faces">
                 <Face {...photographs.ben} />
-                <div>ou</div>
+                <div><FormattedMessage id="or" /></div>
                 <Face {...photographs.cyril} />
                 <div>?</div>
             </div>
@@ -58,15 +60,15 @@ class Introduction extends Component {
                 <form onSubmit={this.onSubmit}>
                     <input
                         type="text"
-                        placeholder="Votre prénom"
+                        placeholder={this.props.intl.formatMessage({id: 'firstName'})}
                         value={this.state.firstName}
                         onChange={(evt) => this.setState({firstName: evt.target.value}) }
                     />
                     <br/>
-                    <button type="submit" disabled={!this.state.firstName.length}>Commencez</button>
+                    <button type="submit" disabled={!this.state.firstName.length}><FormattedMessage id="start" /></button>
                 </form>
-                ou<br />
-                <a onClick={this.register.bind(this, undefined)}>restez anonyme</a>
+                <FormattedMessage id="or" /><br />
+                <a onClick={this.register.bind(this, undefined)}><FormattedMessage id="stayAnonymous" /></a>
             </div>
         );
     }
@@ -76,8 +78,8 @@ class Introduction extends Component {
         const firstName = this.props.isAnonymous ? null : <span className="firstName">{this.props.firstName}</span>;
         return (
             <div className="welcome">
-                <p>Content de te revoir {firstName} !</p>
-                <button type="button" onClick={this.next}>Commencez</button>
+                <p><FormattedMessage id="welcome" values={{firstName,}} /> !</p>
+                <button type="button" onClick={this.next}><FormattedMessage id="start" /></button>
             </div>
         );
     }
@@ -88,10 +90,10 @@ class Introduction extends Component {
                 {this.renderFaces()}
                 <div className="Sidebar">
                     <div>
-                        <h2>Saurez-vous trouver le style du photographe?</h2>
-                        <p>Après quelques milliers de photos prises pendant 2 semaines, nous nous sommes demandés si les gens seraient capables de deviner quelles photographies &eacute;taient prises par <em>qui</em>.</p>
+                        <h2><FormattedMessage id="title" /></h2>
+                        <p><FormattedHTMLMessage id="description" /></p>
                         <br />
-                        <p>Le critère de sélection était de choisir une photo par jour. Parcourez les {this.props.count} photos selectionnées et cliquez sur la tête du photographe que vous pensez à pris la photo.</p>
+                        <p><FormattedHTMLMessage id="criteria" values={{count: this.props.count}} /></p>
                     </div>
                     {this.renderWelcomeBack()}
                     {this.renderForm()}
@@ -111,4 +113,4 @@ function select(store) {
     };
 }
 
-export default connect(select)(Introduction);
+export default connect(select)(injectIntl(Introduction));
