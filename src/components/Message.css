@@ -3,9 +3,9 @@
 }
 
 .Message.wrong {
-    background-color: #a22929;
+    background-color: rgb(240, 14, 46);
 }
 
 .Message.correct {
-    background-color: #3d9c3d;
+    background-color: rgb(115, 217, 112);
 }
