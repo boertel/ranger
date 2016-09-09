@@ -19,10 +19,9 @@ export default class Row extends Component {
     }
 
     render() {
-        let ratio = 0;
-        this.props.children.map(image => {
-            ratio += aspectRatio(image.props);
-        });
+        const ratio = this.props.children.reduce((ratio, image) => {
+            return ratio + aspectRatio(image.props);
+        }, 0);
 
         const children = React.Children.map(this.props.children, (child) => {
             return React.cloneElement(child, {
@@ -33,7 +32,7 @@ export default class Row extends Component {
         });
 
         return (
-            <div className="Row" ref={(c) => this._container = c}>
+            <div className="Row" ref={(c) => { this._container = c; }}>
                 {children}
             </div>
         )

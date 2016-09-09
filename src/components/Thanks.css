@@ -1,0 +1,26 @@
+.Overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Thanks {
+    width: 50%;
+    text-align: center;
+}
+.Thanks p {
+    margin-bottom: 0.7em;
+}
+.Thanks .signature {
+    font-style: italic;
+}
+
+.Thanks .credits {
+    margin-top: 3em;
+}

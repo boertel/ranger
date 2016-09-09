@@ -13,6 +13,10 @@
     padding: 1em;
 }
 
+.End .Header {
+    margin-top: 0;
+}
+
 .End .Header h1 {
     font-size: 3em;
 }

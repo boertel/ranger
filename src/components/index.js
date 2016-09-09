@@ -5,6 +5,7 @@ import Header from './Header';
 import Message from './Message';
 import Metadata from './Metadata';
 import Next from './Next';
+import Thanks from './Thanks';
 
 
 module.exports = {
@@ -15,4 +16,5 @@ module.exports = {
     Message,
     Next,
     Grid,
+    Thanks,
 };

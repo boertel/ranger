@@ -11,9 +11,15 @@ export default class Face extends Component {
         };
         const classNames = ['Face'];
 
-        (correct === true) && classNames.push('correct');
-        (correct === false) && classNames.push('wrong');
-        disabled && classNames.push('disabled');
+        if (correct === true) {
+            classNames.push('correct');
+        }
+        if (correct === false) {
+            classNames.push('wrong');
+        }
+        if (disabled) {
+            classNames.push('disabled');
+        }
 
         return (
             <div className={classNames.join(' ')} style={style} />

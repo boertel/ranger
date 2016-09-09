@@ -6,7 +6,7 @@ import './Thumbnail.css';
 export default class Thumbnail extends Component {
 
     render() {
-        const { url, ranking, ratio, widthContainer, aspectRatio } = this.props;
+        const { url, ratio, widthContainer, aspectRatio } = this.props;
         const width = Math.floor((widthContainer / ratio) * aspectRatio);
         const height = Math.floor(widthContainer / ratio);
 
@@ -19,7 +19,7 @@ export default class Thumbnail extends Component {
                 onClick={this.props.onClick}
                 className="Thumbnail"
                 style={style}>
-                <img src={url} />
+                <img src={url} alt={this.url} />
                 {this.props.children}
             </div>
         );

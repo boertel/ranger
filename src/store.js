@@ -13,4 +13,4 @@ var logger = createLogger({
 });
 
 const router = routerMiddleware(browserHistory);
-export default applyMiddleware(router, thunk, logger)(createStore)
+export default applyMiddleware(router, thunk, logger, analytics)(createStore)

@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import {
     Grid,
     Header,
+    Thanks,
 } from '../components';
 import { back } from '../actions';
 
@@ -13,29 +14,47 @@ import './End.css';
 
 
 class End extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            thanks: undefined,
+        };
+    }
+
+    closeThanks() {
+        this.setState({
+            thanks: false,
+        });
+    }
+
     render() {
         const { dispatch, total, favorites, correct } = this.props;
         const count = 3 - favorites;
-        const thanks = count === 0 ? <div>Merci de la part deCyril & Benjamin :)</div> : null;
         const percentage = Math.floor(correct / total * 100);
 
+        let thanks = (count === 0);
+        if (this.state.thanks !== undefined) {
+            thanks = this.state.thanks;
+        }
         return (
-            <div className="End">
-                <Grid />
-                <div className="Sidebar">
-                    <Header back={() => dispatch(back(total + 1))}>
-                        <h1>{percentage}%</h1>
-                    </Header>
-                    <div>
-                    <p>Tu as réussi à deviner <strong>{correct} fois</strong> le correct photographe sur les {total} photographies.</p>
-                    </div>
+            <div>
+                <div className="End">
+                    <Grid />
+                    <div className="Sidebar">
+                        <Header back={() => dispatch(back(total + 1))}>
+                            <h1>{percentage}%</h1>
+                        </Header>
+                        <div>
+                        <p>Tu as réussi à deviner <strong>{correct} fois</strong> le correct photographe sur les {total} photographies.</p>
+                        </div>
 
-                    <div>
-                        <h2>Et une dernière étape !</h2>
-                            <p>Choisi tes <strong>{count}</strong> photographies préferées and cliquant sur <a>&#9734;</a>.</p>
+                        <div>
+                            <h2>Et une dernière étape !</h2>
+                                <p>Choisi tes <strong>{count}</strong> photographies préferées and cliquant sur <a>&#9734;</a>.</p>
+                        </div>
                     </div>
-                    <div>{thanks}</div>
                 </div>
+                <Thanks close={() => this.closeThanks()} show={thanks}/>
             </div>
         );
     }

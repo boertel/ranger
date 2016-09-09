@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Location from './Location';
-import Time from './Time';
 
 
 export default function Metadata(props) {

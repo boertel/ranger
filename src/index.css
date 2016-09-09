@@ -53,7 +53,7 @@ input {
     background-color: #000;
     border-bottom: 1px solid #fff;
     color: #fff;
-    margin: 1em 0em;
+    margin: 0em;
     text-align: center;
     max-width: 100%;
 }
@@ -63,12 +63,16 @@ button {
     outline: none;
     padding: 0.5em;
     border: none;
-    margin-bottom: 1em;
+    margin: 1em 0;
 }
 
 button:hover {
     cursor: pointer;
     background-color: #b17072;
+}
+
+button:disabled {
+    background-color: #ccc;
 }
 
 #root {
