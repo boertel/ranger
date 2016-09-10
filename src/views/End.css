@@ -24,6 +24,12 @@
     margin: 2em 0em 0.5em;
 }
 
+.End .thankyou {
+    margin-top: 4em;
+    text-align: center;
+}
+
+
 @media (max-width: 800px) {
     .End {
         flex-direction: column-reverse;

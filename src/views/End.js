@@ -28,6 +28,12 @@ class End extends Component {
         });
     }
 
+    openThanks() {
+        this.setState({
+            thanks: true,
+        });
+    }
+
     componentWillMount() {
         const { complete, dispatch, lastIndex, total } = this.props;
         if (!complete) {
@@ -58,6 +64,11 @@ class End extends Component {
                         <div>
                             <h2><FormattedMessage id="lastStep" /></h2>
                             <p><FormattedHTMLMessage id="favorite" values={{count,}}/></p>
+                        </div>
+                        <div className="thankyou">
+                            <FormattedMessage id="thankyou" values={{
+                                link: <a onClick={() => { this.openThanks() }}>Cyril & Benjamin</a>
+                            }}/>
                         </div>
                     </div>
                 </div>

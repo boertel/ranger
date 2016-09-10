@@ -3,6 +3,7 @@
     flex-direction: column;
     width: 100%;
     min-height: 100%;
+    margin: 1em;
 }
 
 .Row {
@@ -15,4 +16,5 @@
     bottom: 0;
     right: 4px;
     font-size: 2em;
+    text-shadow: #000 1px 1px 10px;
 }

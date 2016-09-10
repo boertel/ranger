@@ -1,6 +1,9 @@
 .Thumbnail {
     position: relative;
-    margin: 0 0.5em 0.5em 0;
+    margin: 0 1em 1em 0;
+    border-width: 0px;
+    border-style: solid;
+    border-color: #EEACAE;
 }
 
 .Thumbnail img {
@@ -11,10 +14,12 @@
 .Thumbnail:hover .Face {
     opacity: 0.1;
 }
+
 .Thumbnail .Face {
     position: absolute;
     bottom: 0em;
     width: 80px;
     height: 88px;
     transition: opacity 0.3s ease-out;
+    opacity: 1;
 }

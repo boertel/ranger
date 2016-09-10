@@ -44,6 +44,7 @@ class Grid extends Component {
                 <Thumbnail
                     key={picture.id}
                     onClick={this.favorite.bind(this, picture)}
+                    style={{borderWidth: picture.ranking ? '2px' : ''}}
                     {...picture}>
                     <a className="Favorite">{star}</a>
                     <Face correct={picture.correct} {...photograph} />

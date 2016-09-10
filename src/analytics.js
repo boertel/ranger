@@ -1,6 +1,8 @@
 module.exports = store => next => action => {
     if (action.type === 'USER_REGISTERED') {
-        window.analytics.identify(action.firstName);
+        if (!action.isAnonymous) {
+            window.analytics.identify({firstName: action.firstName});
+        }
     }
     if (action.type === 'VOTE') {
         window.analytics.track('vote', {
