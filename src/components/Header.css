@@ -10,9 +10,9 @@
     color: #888;
 }
 
+.Header .arrow {
+    width: 20px;
+}
 .Header .arrow a {
     text-decoration: none;
-}
-
-.Header h2 {
 }
