@@ -317,8 +317,8 @@ const pictures = {
             "type": "flickr"
         },
         "title": {
-            "en": "DSC_0545",
-            "fr": "DSC_0545"
+            "en": "Can(y)on",
+            "fr": "Can(y)on"
         },
         "width": "4496"
     },
