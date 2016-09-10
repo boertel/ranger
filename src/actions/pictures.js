@@ -222,8 +222,8 @@ const pictures = {
             "type": "flickr"
         },
         "title": {
-            "en": "Eau-ga (french)",
-            "fr": "Eau-ga"
+            "en": "Y-eau-ga (french)",
+            "fr": "Y-eau-ga"
         },
         "width": "3925"
     },
@@ -394,7 +394,7 @@ const pictures = {
         },
         "title": {
             "en": "Synchronized Swimming",
-            "fr": "Nage synchronis\u00e9e"
+            "fr": "Dos fins"
         },
         "width": "4541"
     },

@@ -35,8 +35,7 @@
 }
 
 .Introduction .welcome .firstName {
-    background-color: #EFADAF;
-    padding: 0.2em;
+    border-bottom: 1px solid #EFADAF;
 }
 
 @media (max-width: 800px) {

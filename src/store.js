@@ -7,7 +7,7 @@ import thunk from 'redux-thunk';
 import analytics from './analytics';
 
 var logger = createLogger({
-    predicate: () => true,
+    predicate: () => process.env.NODE_ENV !== 'production',
     collapsed: true,
     duration: true,
 });

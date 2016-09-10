@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import qs from 'qs';
 
 import App from './App';
 
@@ -28,11 +29,17 @@ import messages from './messages';
 
 
 const store = createStore(reducers, autoRehydrate());
-persistStore(store, {blacklist: ['routing', 'photographs', 'loading',]});
+
+const persistent = persistStore(store, {blacklist: ['routing', 'photographs', 'loading',]});
+
+const search = qs.parse(document.location.search.substring(1));
+if (search.clean) {
+    persistent.purge();
+}
 
 const history = syncHistoryWithStore(browserHistory, store);
 
-const language = navigator.language;
+const language = search.locale || navigator.language;
 
 let locale = 'en'
 if (language.split('-')[0] === 'fr') {
