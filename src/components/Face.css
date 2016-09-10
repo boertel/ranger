@@ -3,7 +3,7 @@
     background-size: cover;
     width: 120px;
     height: 140px;
-    filter: grayscale();
+    filter: grayscale(100%);
 }
 
 @media (max-width: 800px) {

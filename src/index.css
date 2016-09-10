@@ -26,11 +26,6 @@ p {
     padding: 0;
 }
 
-.defs-only {
-    display: none;
-}
-
-
 ::selection {
     background-color: #EFADAF;
 }
