@@ -51,8 +51,8 @@ const pictures = {
             "type": "flickr"
         },
         "title": {
-            "en": "DSC_0680",
-            "fr": "DSC_0680"
+            "en": "That is Hawai'i",
+            "fr": "\u00c7a, c'est Hawai'i"
         },
         "width": "4496"
     },
@@ -169,6 +169,25 @@ const pictures = {
             "fr": "Ca mord ?"
         },
         "width": "4496"
+    },
+    "28950022844": {
+        "date_taken": "2016-08-21 14:56:44",
+        "height": "3264",
+        "id": "28950022844",
+        "location": "Waimea Canyon State Park, Kaua'i",
+        "photographId": "ben",
+        "src": {
+            "farm": 9,
+            "id": "28950022844",
+            "secret": "67cc8ac279",
+            "server": "8016",
+            "type": "flickr"
+        },
+        "title": {
+            "en": "Look at the view",
+            "fr": "Regarde le paysage"
+        },
+        "width": "4896"
     },
     "29282418430": {
         "date_taken": "2016-08-20 09:37:53",

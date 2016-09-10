@@ -14,6 +14,9 @@ export default class Thanks extends Component {
                 <div className="Thanks">
                     <div>
                         <p><FormattedMessage id="thanks" /></p>
+                        <p>
+                            <img src="https://farm9.staticflickr.com/8304/29575930825_9ebba710a9_o.gif" alt="Merci" />
+                        </p>
                         <p className="signature"><FormattedMessage id="signature" /></p>
                         <p><a onClick={this.props.close}><FormattedMessage id="backToPhotos" /></a></p>
                     </div>
