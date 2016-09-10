@@ -25,7 +25,7 @@ class App extends Component {
 
 function select(store) {
     return {
-        loaded: Object.keys(store.pictures).length !== 0,
+        loaded: store.loading.loaded,
     }
 }
 export default connect(select)(App);

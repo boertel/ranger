@@ -28,18 +28,20 @@ import messages from './messages';
 
 
 const store = createStore(reducers, autoRehydrate());
-persistStore(store, {blacklist: ['routing', 'photographs',]});
+persistStore(store, {blacklist: ['routing', 'photographs', 'loading',]});
 
 const history = syncHistoryWithStore(browserHistory, store);
 
+const language = navigator.language;
+
 let locale = 'en'
-if (navigator.language.split('-')[0] === 'fr') {
+if (language.split('-')[0] === 'fr') {
     locale = 'fr';
 }
 const localizedMessages = messages[locale];
 
 ReactDOM.render((
-    <IntlProvider locale={navigator.language} messages={localizedMessages}>
+    <IntlProvider locale={language} messages={localizedMessages}>
         <Provider store={store}>
             <Router history={history}>
                 <Route path="/" component={App}>

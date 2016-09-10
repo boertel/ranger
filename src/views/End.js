@@ -9,7 +9,7 @@ import {
     Header,
     Thanks,
 } from '../components';
-import { back } from '../actions';
+import { back, next } from '../actions';
 
 import './End.css';
 
@@ -28,8 +28,15 @@ class End extends Component {
         });
     }
 
+    componentWillMount() {
+        const { complete, dispatch, lastIndex, total } = this.props;
+        if (!complete) {
+            dispatch(next(lastIndex, total));
+        }
+    }
+
     render() {
-        const { dispatch, total, favorites, correct } = this.props;
+        const { dispatch, total, favorites, correct, } = this.props;
         const count = 3 - favorites;
         const percentage = Math.floor(correct / total * 100);
 
@@ -62,10 +69,22 @@ class End extends Component {
 
 function select(store) {
     const pictures = _.values(store.pictures);
+    const total = pictures.length;
+    const favorites = pictures.filter(picture => !!picture.ranking).length;
+    const correct = pictures.filter(picture => picture.photographId === picture.predictionId).length;
+    const completed = pictures.filter(picture => picture.predictionId).length;
+    const complete = completed === total;
+    let lastIndex;
+    if (!complete) {
+        const last = _.chain(store.pictures).pick(store.order).values().value().find(picture => !picture.predictionId);
+        lastIndex = store.order.indexOf(last.id);
+    }
     return {
-        total: pictures.length,
-        favorites: pictures.filter(picture => !!picture.ranking).length,
-        correct: pictures.filter(picture => picture.photographId === picture.predictionId).length
+        total,
+        favorites,
+        correct,
+        complete: completed === total,
+        lastIndex,
     }
 }
 

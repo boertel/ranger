@@ -6,6 +6,7 @@ import pictures from './pictures';
 import order from './order';
 import user from './user';
 import photographs from './photographs';
+import loading from './loading';
 
 
 export default combineReducers({
@@ -14,4 +15,5 @@ export default combineReducers({
     order,
     photographs,
     user,
+    loading,
 })

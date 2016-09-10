@@ -12,10 +12,10 @@ export default class Thumbnail extends Component {
         const width = Math.floor((widthContainer / ratio) * aspectRatio);
         const height = Math.floor(widthContainer / ratio);
 
-        const style = {
+        const style = Object.assign({}, {
             width,
             height,
-        };
+        }, this.props.style);
 
         const url = buildUrl(src, width, height);
         return (
