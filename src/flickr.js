@@ -23,7 +23,7 @@ function threshold(width, height) {
         { ext: 'z', pixels: 640 },
         { ext: 'c', pixels: 800 },
         { ext: 'b', pixels: 1024 },
-        { ext: 'h', pixels: 1600 },
+        { ext: 'b', pixels: 1600 },
     ]
     var max = Math.max(width, height),
         i = 0;
