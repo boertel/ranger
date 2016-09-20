@@ -10,8 +10,10 @@ function buildUrl(photo, width, height) {
     }
     if (size !== undefined) {
         base += '_' + size;
+        return base + '.' + extension;
+    } else {
+        return photo.url_o;
     }
-    return base + '.' + extension;
 }
 
 function threshold(width, height) {
@@ -25,13 +27,15 @@ function threshold(width, height) {
         { ext: 'b', pixels: 1024 },
         { ext: 'b', pixels: 1600 },
     ]
-    var max = Math.max(width, height),
-        i = 0;
+    let ext;
+    const max = Math.max(width, height);
 
-    while (i > limits.length - 1 || max >= limits[i].pixels) {
-        i += 1;
+    for (let i = 0; i < limits.length - 1; i += 1) {
+        if (max >= limits[i].pixels && max < limits[i + 1].pixels) {
+            ext = limits[i].ext;
+        }
     }
-    return limits[i].ext;
+    return ext;
 }
 
 export {

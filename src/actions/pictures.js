@@ -10,7 +10,8 @@ const pictures = {
             "id": "28947014644",
             "secret": "d0507d8b1a",
             "server": "8178",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8178/28947014644_7cc5ef3c11_o.jpg"
         },
         "title": {
             "en": "Washed ashore",
@@ -29,7 +30,8 @@ const pictures = {
             "id": "28947075814",
             "secret": "efbab640f0",
             "server": "8017",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8017/28947075814_33aff417c8_o.jpg"
         },
         "title": {
             "en": "Outburst",
@@ -48,7 +50,8 @@ const pictures = {
             "id": "28947236904",
             "secret": "76d88c9851",
             "server": "8629",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8629/28947236904_7d24781f4d_o.jpg"
         },
         "title": {
             "en": "That is Hawai'i",
@@ -67,7 +70,8 @@ const pictures = {
             "id": "28949063773",
             "secret": "ca0c26b9b3",
             "server": "8430",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8430/28949063773_6b530f7ec3_o.jpg"
         },
         "title": {
             "en": "Chut",
@@ -86,7 +90,8 @@ const pictures = {
             "id": "28949074933",
             "secret": "252f577bf1",
             "server": "8361",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8361/28949074933_441c415b1f_o.jpg"
         },
         "title": {
             "en": "Stand out",
@@ -105,7 +110,8 @@ const pictures = {
             "id": "28949099823",
             "secret": "38932c5bb6",
             "server": "8176",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8176/28949099823_c4630d000e_o.jpg"
         },
         "title": {
             "en": "Gradient",
@@ -124,7 +130,8 @@ const pictures = {
             "id": "28949106093",
             "secret": "fdcbb7dac8",
             "server": "8057",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8057/28949106093_5e5c4a2f23_o.jpg"
         },
         "title": {
             "en": "And there was light",
@@ -143,7 +150,8 @@ const pictures = {
             "id": "28949198353",
             "secret": "046aa2ec94",
             "server": "8060",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8060/28949198353_488e914b55_o.jpg"
         },
         "title": {
             "en": "Ironman start",
@@ -162,7 +170,8 @@ const pictures = {
             "id": "28949266803",
             "secret": "cd429d19e9",
             "server": "8342",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8342/28949266803_0612606eb8_o.jpg"
         },
         "title": {
             "en": "Any bite ?",
@@ -181,7 +190,8 @@ const pictures = {
             "id": "28950022844",
             "secret": "67cc8ac279",
             "server": "8016",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8016/28950022844_59cef9ec08_o.jpg"
         },
         "title": {
             "en": "Look at the view",
@@ -200,7 +210,8 @@ const pictures = {
             "id": "29282418430",
             "secret": "bd0602cf42",
             "server": "8491",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8491/29282418430_4b8909019e_o.jpg"
         },
         "title": {
             "en": "Bars",
@@ -219,7 +230,8 @@ const pictures = {
             "id": "29282426480",
             "secret": "5c7ba2e28f",
             "server": "8062",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8062/29282426480_ddd6b65a09_o.jpg"
         },
         "title": {
             "en": "Y-eau-ga (french)",
@@ -238,7 +250,8 @@ const pictures = {
             "id": "29282432880",
             "secret": "a122de3afb",
             "server": "8301",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8301/29282432880_5cc7668d79_o.jpg"
         },
         "title": {
             "en": "Pause (french)",
@@ -257,7 +270,8 @@ const pictures = {
             "id": "29282448220",
             "secret": "a7c2aa1140",
             "server": "7793",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm8.staticflickr.com/7793/29282448220_7ccbe0be87_o.jpg"
         },
         "title": {
             "en": "Asticot (french)",
@@ -276,7 +290,8 @@ const pictures = {
             "id": "29282577410",
             "secret": "3a6b702a24",
             "server": "8142",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8142/29282577410_0b8f592035_o.jpg"
         },
         "title": {
             "en": "Selfie",
@@ -295,7 +310,8 @@ const pictures = {
             "id": "29282590200",
             "secret": "762873dd10",
             "server": "8433",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8433/29282590200_0a1bc4cbd8_o.jpg"
         },
         "title": {
             "en": "Suspension",
@@ -314,7 +330,8 @@ const pictures = {
             "id": "29282621710",
             "secret": "1736f63c03",
             "server": "8475",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8475/29282621710_c8a1aca681_o.jpg"
         },
         "title": {
             "en": "Can(y)on",
@@ -333,7 +350,8 @@ const pictures = {
             "id": "29282630800",
             "secret": "93a729b435",
             "server": "8264",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8264/29282630800_967eed2479_o.jpg"
         },
         "title": {
             "en": "Shed on the cliff",
@@ -352,7 +370,8 @@ const pictures = {
             "id": "29462755482",
             "secret": "5226e95e41",
             "server": "7755",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm8.staticflickr.com/7755/29462755482_eee175af44_o.jpg"
         },
         "title": {
             "en": "Trouble",
@@ -371,7 +390,8 @@ const pictures = {
             "id": "29462788562",
             "secret": "4573264909",
             "server": "8151",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8151/29462788562_e3a0902a98_o.jpg"
         },
         "title": {
             "en": "Palnier (french)",
@@ -390,7 +410,8 @@ const pictures = {
             "id": "29492028781",
             "secret": "6174a759df",
             "server": "8054",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8054/29492028781_d14b512f1b_o.jpg"
         },
         "title": {
             "en": "Synchronized Swimming",
@@ -409,7 +430,8 @@ const pictures = {
             "id": "29492167621",
             "secret": "635a1cafcf",
             "server": "8207",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8207/29492167621_d017197523_o.jpg"
         },
         "title": {
             "en": "2-in-1",
@@ -428,7 +450,8 @@ const pictures = {
             "id": "29492202751",
             "secret": "87bce395b3",
             "server": "8399",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8399/29492202751_024377168e_o.jpg"
         },
         "title": {
             "en": "Black sand beach",
@@ -447,7 +470,8 @@ const pictures = {
             "id": "29538677146",
             "secret": "5d0c527159",
             "server": "8302",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8302/29538677146_81aeef4e17_o.jpg"
         },
         "title": {
             "en": "Naturholic",
@@ -466,7 +490,8 @@ const pictures = {
             "id": "29538712686",
             "secret": "199f429f0c",
             "server": "7466",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm8.staticflickr.com/7466/29538712686_91e0507180_o.jpg"
         },
         "title": {
             "en": "Shining real estate ad",
@@ -485,7 +510,8 @@ const pictures = {
             "id": "29538734196",
             "secret": "6950a96c8c",
             "server": "8051",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8051/29538734196_05f1957d56_o.jpg"
         },
         "title": {
             "en": "Water vs Fire",
@@ -504,7 +530,8 @@ const pictures = {
             "id": "29572570325",
             "secret": "c7d7d9d0f4",
             "server": "8556",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8556/29572570325_c376279bfd_o.jpg"
         },
         "title": {
             "en": "You rock",
@@ -523,7 +550,8 @@ const pictures = {
             "id": "29572654575",
             "secret": "b4fa22c082",
             "server": "8375",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8375/29572654575_447152c282_o.jpg"
         },
         "title": {
             "en": "Dive in dirty water",
@@ -542,7 +570,8 @@ const pictures = {
             "id": "29572659675",
             "secret": "8c55deb8ea",
             "server": "8417",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8417/29572659675_c625d1961a_o.jpg"
         },
         "title": {
             "en": "Hangloose",
@@ -561,7 +590,8 @@ const pictures = {
             "id": "29572746625",
             "secret": "eb300cca91",
             "server": "8082",
-            "type": "flickr"
+            "type": "flickr",
+            "url_o": "https://farm9.staticflickr.com/8082/29572746625_6c7dd86056_o.jpg"
         },
         "title": {
             "en": "Framed palm trees",
