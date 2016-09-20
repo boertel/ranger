@@ -99,8 +99,15 @@ class Picture extends Component {
 }
 
 function select(store, props) {
-    const index = parseInt(props.params.index, 10);
-    const key = store.order[index - 1];
+    let index, key;
+    if (props.params.index) {
+        index = parseInt(props.params.index, 10);
+        key = store.order[index - 1];
+    } else {
+        key = props.params.key;
+        index = store.order.indexOf(key) + 1;
+    }
+
     const current = store.pictures[key];
     return {
         ...current,
