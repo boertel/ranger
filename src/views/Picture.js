@@ -44,9 +44,7 @@ class Picture extends Component {
 
     next() {
         const { dispatch, index, count, hasNext } = this.props;
-        if (hasNext) {
-            dispatch(next(index, count));
-        }
+        dispatch(next(index, count));
     }
 
     back() {
@@ -69,7 +67,7 @@ class Picture extends Component {
     render() {
         const { index, count, hasNext, src, } = this.props;
 
-        const next = hasNext ? this.next : undefined
+        const next =this.next;
 
         const header = (<Header next={next} back={this.back}>
                             <h2>{index} <span className="subtle">/ {count}</span></h2>
