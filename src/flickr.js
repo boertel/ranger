@@ -9,7 +9,9 @@ function buildUrl(photo, width, height) {
         size = 'o_d';
     }
     if (size !== undefined) {
-        base += '_' + size;
+        if (size !== '') {
+            base += '_' + size;
+        }
         return base + '.' + extension;
     } else {
         return photo.url_o;
@@ -21,7 +23,7 @@ function threshold(width, height) {
         { ext: 't', pixels: 100 },
         { ext: 'm', pixels: 240 },
         { ext: 'n', pixels: 320 },
-        { ext: undefined, pixels: 500 },
+        { ext: '', pixels: 500 },
         { ext: 'z', pixels: 640 },
         { ext: 'c', pixels: 800 },
         { ext: 'b', pixels: 1024 },

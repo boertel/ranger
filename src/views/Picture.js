@@ -43,7 +43,7 @@ class Picture extends Component {
     }
 
     next() {
-        const { dispatch, index, count, hasNext } = this.props;
+        const { dispatch, index, count, } = this.props;
         dispatch(next(index, count));
     }
 
@@ -67,9 +67,7 @@ class Picture extends Component {
     render() {
         const { index, count, hasNext, src, } = this.props;
 
-        const next =this.next;
-
-        const header = (<Header next={next} back={this.back}>
+        const header = (<Header next={this.next} back={this.back}>
                             <h2>{index} <span className="subtle">/ {count}</span></h2>
                         </Header>);
         const metadata = hasNext ? <Metadata {...this.props} /> : null;

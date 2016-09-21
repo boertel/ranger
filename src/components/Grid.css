@@ -6,6 +6,12 @@
     margin: 1em;
 }
 
+@media(max-width: 767px) {
+    .Grid {
+        margin: 0em;
+    }
+}
+
 .Row {
     display: flex;
     width: 100%;

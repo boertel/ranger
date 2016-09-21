@@ -6,6 +6,12 @@
     border-color: #EEACAE;
 }
 
+@media(max-width: 767px) {
+    .Thumbnail {
+        margin: 0 0 1em 0;
+    }
+}
+
 .Thumbnail img {
     width: 100%;
     height: 100%;

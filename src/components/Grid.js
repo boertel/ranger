@@ -11,6 +11,9 @@ import Face from './Face';
 import { rank, unrank } from '../actions';
 
 
+const CHILDREN_PER_ROW = window.outerWidth < 768 ? 1 : 3;
+
+
 class Grid extends Component {
 
     constructor(props) {
@@ -59,7 +62,7 @@ class Grid extends Component {
         let key = 0;
         this.props.pictures.forEach((picture, i) => {
             row.push(picture);
-            if (i % 3 === 2) {
+            if (i % CHILDREN_PER_ROW === (CHILDREN_PER_ROW - 1)) {
                 key += 1;
                 rows.push(<Row key={key}>{this.renderThumbnails(row)}</Row>);
                 row = [];
